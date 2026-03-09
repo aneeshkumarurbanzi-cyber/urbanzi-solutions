@@ -14,12 +14,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-lg border-b border-white/10">
+    <nav className="fixed top-0 left-0 w-full max-w-full overflow-x-hidden z-50 bg-black/40 backdrop-blur-lg border-b border-white/10">
 
       {/* NAV CONTAINER */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
 
-        {/* MOBILE MENU BUTTON (LEFT ON PHONE) */}
+        {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-white"
@@ -28,7 +28,7 @@ export default function Navbar() {
         </button>
 
         {/* LOGO */}
-        <div className="text-white text-lg md:text-xl font-semibold leading-tight text-center flex-1 md:flex-none">
+        <div className="text-white text-lg md:text-xl font-semibold leading-tight text-center flex-1 md:flex-none truncate max-w-[180px] sm:max-w-none">
           URBANZI <br className="hidden sm:block" /> SOLUTIONS
         </div>
 
