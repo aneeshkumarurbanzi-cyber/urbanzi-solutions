@@ -1,0 +1,129 @@
+"use client";
+import Image from "next/image";
+
+export default function CaseStudies() {
+  return (
+    <section className="bg-black py-16 md:py-24 px-4 md:px-6 text-white">
+      <div className="max-w-7xl mx-auto">
+
+        {/* Heading */}
+        <div className="mb-12 md:mb-16">
+          <div className="inline-block bg-white/10 text-gray-300 text-[10px] md:text-xs tracking-widest px-4 md:px-5 py-2 rounded-full uppercase mb-4 md:mb-6">
+            Innovation. Implementation. Success.
+          </div>
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-3 md:mb-4">
+            Our{" "}
+            <span className="text-blue-400 italic">
+              Case Studies
+            </span>
+          </h2>
+
+          <p className="text-gray-400 max-w-3xl text-sm md:text-base">
+            We help organizations overcome their biggest business challenges.
+            Discover how our clients improved their performance.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+
+          {/* CARD 1 */}
+          <div className="relative group rounded-3xl overflow-hidden cursor-pointer">
+
+            <Image
+              src="/car.jpg"
+              alt="Arrow Cabs"
+              width={800}
+              height={600}
+              className="w-full h-[360px] md:h-[500px] object-cover transition duration-700 group-hover:scale-110"
+            />
+
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/75 transition duration-500" />
+
+            <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 transition duration-500 group-hover:opacity-0">
+              <div className="h-[1px] bg-white/60 w-16 md:w-24 mb-4 md:mb-6" />
+              <h3 className="text-2xl md:text-4xl font-bold">Arrow Cabs</h3>
+              <p className="text-gray-300 mt-1 md:mt-2 text-sm md:text-base">Website / SEO</p>
+            </div>
+
+            <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+
+              <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
+                Best car rental in Trivandrum
+              </h3>
+
+              <p className="text-gray-300 mb-6 md:mb-8 max-w-md text-sm md:text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+
+              <div className="flex flex-wrap gap-3 md:gap-6">
+                <Stat number="3000+" label="Campaigns Delivered" />
+                <Stat number="75%" label="Conversion Rate" />
+                <Stat number="95+" label="Client Satisfaction" />
+              </div>
+            </div>
+          </div>
+
+          {/* CARD 2 */}
+          <div className="relative group rounded-3xl overflow-hidden cursor-pointer">
+
+            <Image
+              src="/market.jpg"
+              alt="Digital Marketing Pro"
+              width={800}
+              height={600}
+              className="w-full h-[360px] md:h-[500px] object-cover transition duration-700 group-hover:scale-110"
+            />
+
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/75 transition duration-500" />
+
+            <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 transition duration-500 group-hover:opacity-0">
+              <div className="h-[1px] bg-white/60 w-16 md:w-24 mb-4 md:mb-6" />
+              <h3 className="text-2xl md:text-4xl font-bold">
+                Digital Marketing Pro
+              </h3>
+              <p className="text-gray-300 mt-1 md:mt-2 text-sm md:text-base">
+                Branding / Marketing
+              </p>
+            </div>
+
+            <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+
+              <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
+                Leading marketing agency
+              </h3>
+
+              <p className="text-gray-300 mb-6 md:mb-8 max-w-md text-sm md:text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+
+              <div className="flex flex-wrap gap-3 md:gap-6">
+                <Stat number="3000+" label="Campaigns Delivered" />
+                <Stat number="75%" label="Conversion Rate" />
+                <Stat number="95+" label="Client Satisfaction" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Small Stat Component */
+function Stat({ number, label }) {
+  return (
+    <div className="bg-white/90 text-black px-4 md:px-6 py-3 md:py-4 rounded-2xl text-center min-w-[110px] md:min-w-[140px]">
+      <div className="text-lg md:text-xl font-bold text-orange-600">
+        {number}
+      </div>
+      <div className="text-[10px] md:text-xs font-medium mt-1">
+        {label}
+      </div>
+    </div>
+  );
+}
