@@ -17,10 +17,18 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-lg border-b border-white/10">
 
       {/* NAV CONTAINER */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+
+        {/* MOBILE MENU BUTTON (LEFT ON PHONE) */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-white"
+        >
+          {open ? <X size={28} /> : <Menu size={28} />}
+        </button>
 
         {/* LOGO */}
-        <div className="text-white text-lg md:text-xl font-semibold leading-tight max-w-[70%] sm:max-w-none truncate">
+        <div className="text-white text-lg md:text-xl font-semibold leading-tight text-center flex-1 md:flex-none">
           URBANZI <br className="hidden sm:block" /> SOLUTIONS
         </div>
 
@@ -111,14 +119,6 @@ export default function Navbar() {
         {/* DESKTOP BUTTON */}
         <button className="hidden md:block bg-white text-black px-5 py-2 rounded-full font-medium hover:bg-gray-200 transition">
           Let’s Talk
-        </button>
-
-        {/* MOBILE MENU BUTTON */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-white flex-shrink-0"
-        >
-          {open ? <X size={28} /> : <Menu size={28} />}
         </button>
 
       </div>

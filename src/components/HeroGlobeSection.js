@@ -2,7 +2,7 @@
 
 export default function HeroGlobeSection() {
   return (
-    <div className="relative flex items-center justify-center mt-55 overflow-hidden">
+    <section className="relative bg-[#050816] text-white overflow-hidden">
 
       {/* HERO CONTENT */}
       <div className="flex flex-col items-center justify-center text-center px-6 pt-28 pb-12 relative z-20">
@@ -36,10 +36,10 @@ export default function HeroGlobeSection() {
 
       {/* ================= GLOBE SECTION ================= */}
 
-      <div className="relative flex items-center justify-center mt-24 min-h-[500px] sm:min-h-[700px]">
+      <div className="relative flex items-center justify-center mt-24">
 
         {/* Rotating Globe */}
-        <div className="absolute w-[800px] h-[800px] sm:w-[1000px] sm:h-[1000px] lg:w-[1500px] lg:h-[1500px] animate-rotateSlow opacity-65">
+        <div className="absolute w-[700px] h-[700px] sm:w-[900px] sm:h-[900px] md:w-[1200px] md:h-[1200px] animate-rotateSlow opacity-65">
           <img
             src="/globe.png"
             alt="Globe"
