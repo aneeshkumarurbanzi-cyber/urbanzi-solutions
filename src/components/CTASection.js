@@ -12,7 +12,7 @@ export default function CTASection() {
 
           {/* Background Image */}
           <Image
-            src="/cta-bg.jpg"
+            src="/cta-bg.webp"
             alt="CTA Background"
             fill
             className="object-cover"

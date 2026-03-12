@@ -20,15 +20,15 @@ export default function ContactSection() {
 
   return (
 
-    <section className="bg-black text-white py-24 px-6">
+    <section className="bg-black text-white py-20 md:py-24 px-6">
 
       <div className="max-w-7xl mx-auto">
 
         {/* HEADER */}
 
-        <div className="text-center mb-20">
+        <div className="text-center mb-16 md:mb-20">
 
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
 
             Get in Touch
 
@@ -40,9 +40,9 @@ export default function ContactSection() {
 
           </h2>
 
-          <div className="w-24 h-[3px] bg-white mx-auto mt-6 mb-6 rounded-full"></div>
+          <div className="w-20 md:w-24 h-[3px] bg-white mx-auto mt-6 mb-6 rounded-full"></div>
 
-          <p className="text-gray-400 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+          <p className="text-gray-400 max-w-3xl mx-auto text-sm md:text-base leading-relaxed px-2">
             We're excited to connect with you! Whether you're interested in starting a project,
             learning more about our services, or just want to chat, we're here to help.
             Fill out the form below and our team will get back to you soon.
@@ -52,20 +52,20 @@ export default function ContactSection() {
 
         {/* CONTENT */}
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
 
           {/* IMAGE */}
 
-          <div className="relative max-w-md mx-auto lg:mx-0">
+          <div className="relative max-w-sm sm:max-w-md mx-auto">
 
-            <div className="absolute -inset-4  blur-2xl rounded-3xl"></div>
+            <div className="absolute -inset-4 blur-2xl rounded-3xl"></div>
 
             <Image
               src="/contact.webp"
               alt="Rocket Launch"
               width={600}
               height={600}
-              className="rounded-2xl border border-white/10 relative z-10 ml-30"
+              className="rounded-2xl border border-white/10 relative z-10 w-full h-auto"
             />
 
           </div>
@@ -73,11 +73,11 @@ export default function ContactSection() {
 
           {/* FORM */}
 
-          <div className="max-w-md w-full mx-auto mr-30">
+          <div className="max-w-md w-full mx-auto">
 
             <form
               onSubmit={handleSubmit}
-              className="bg-[#0b1220] border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl space-y-6 backdrop-blur-sm"
+              className="bg-[#0b1220] border border-white/10 rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl space-y-6 backdrop-blur-sm"
             >
 
               {/* NAME */}
@@ -184,7 +184,7 @@ export default function ContactSection() {
                   You agree to our{" "}
                   <a
                     href="#"
-                    className="text-blue-600 hover:text-blue-500 underline"
+                    className="text-blue-500 hover:text-blue-400 underline"
                   >
                     privacy policy
                   </a>
@@ -213,13 +213,13 @@ export default function ContactSection() {
 
         {/* CONTACT INFO */}
 
-        <div className="text-center mt-16 text-gray-400 text-sm">
+        <div className="text-center mt-14 md:mt-16 text-gray-400 text-sm">
 
           <p className="mb-4">
             Or reach out to us directly:
           </p>
 
-          <div className="flex justify-center gap-10 flex-wrap">
+          <div className="flex justify-center gap-6 md:gap-10 flex-wrap">
 
             <a
               href="mailto:contact@urbanzi.in"

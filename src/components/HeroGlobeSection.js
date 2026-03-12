@@ -36,7 +36,7 @@ export default function HeroGlobeSection() {
 
       {/* ================= GLOBE SECTION ================= */}
 
-      <div className="relative flex items-center justify-center mt-16">
+      <div className="relative flex items-center justify-center">
 
         {/* Rotating Globe */}
         <div className="
